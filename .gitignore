@@ -1,0 +1,5 @@
+# created by virtualenv automatically
+try_django/bin
+try_django/lib
+.idea
+try_django/*
