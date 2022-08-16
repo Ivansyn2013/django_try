@@ -3,3 +3,5 @@ try_django/bin
 try_django/lib
 .idea
 try_django/*
+dj_key
+dj_key.pub
