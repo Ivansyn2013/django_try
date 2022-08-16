@@ -5,3 +5,4 @@ try_django/lib
 try_django/*
 dj_key
 dj_key.pub
+./dj_try
