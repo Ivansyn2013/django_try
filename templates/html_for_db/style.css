@@ -1,0 +1,40 @@
+ul {
+    list-style-type: none;
+    font-size: larger;
+}
+
+.header {
+    height: 200px;
+    width: 100%;
+    background-color: aquamarine;
+}
+
+
+.footer {
+    height: 200px;
+    width: 100%;
+    background-color: aquamarine;
+}
+
+.common {
+    box-sizing: border-box;
+    display: flex;
+}
+
+.filter {
+    width: 15%;
+    height: 100%;
+    background-color: blue;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.table {
+    box-sizing: border-box;
+    width: 85%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+
+}
