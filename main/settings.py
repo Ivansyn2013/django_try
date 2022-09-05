@@ -12,9 +12,19 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+#Дописал запрос переменных
+
+from dotenv import load_dotenv, dotenv_values
+
+# Запросили переменные
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
+
+if os.path.exists(dotenv_path):
+    load_dotenv(dotenv_path)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+#Дописал сам
 TEMPLATES_DIRS = os.path.join(BASE_DIR, 'templates')
 
 # Quick-start development settings - unsuitable for production
@@ -79,10 +89,11 @@ WSGI_APPLICATION = 'main.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    # # 'default': {
+    # #     'ENGINE': 'django.db.backends.sqlite3',
+    # #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
+    'default': dict(dotenv_values()) #извлек из переменныз среды
 }
 
 

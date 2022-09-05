@@ -6,3 +6,5 @@ try_django/*
 dj_key
 dj_key.pub
 ./dj_try
+/activate/
+/.env
