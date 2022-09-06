@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     #--my apps
     'authentication',
     'shop',
+    'db',
 
 ]
 
@@ -88,14 +89,16 @@ WSGI_APPLICATION = 'main.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+med_db = dict(dotenv_values())
+med_db['NAME'] = 'med_product_db'
 DATABASES = {
     # # 'default': {
     # #     'ENGINE': 'django.db.backends.sqlite3',
     # #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
-    'default': dict(dotenv_values()) #извлек из переменныз среды
+    'default': dict(dotenv_values()), #извлек из переменных среды
+    'med_db': med_db
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

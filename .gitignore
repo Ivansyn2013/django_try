@@ -8,3 +8,5 @@ dj_key.pub
 ./dj_try
 /activate/
 /.env
+/models.py
+/db/models.py

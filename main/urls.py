@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from main import view
+from db import views
+from shop import views as shop_views
 
 urlpatterns = [
-    path('', view.index, name='index'),
+    path('', views.index, name='index'), #указываем путь домена , что отображать, присваиваем произвольное имя
+    path('shop/', shop_views.index, name='shop'),
     path('admin/', admin.site.urls),
 ]
