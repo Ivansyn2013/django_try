@@ -1,8 +1,8 @@
-from models import Maker
+from db.models import Maker
 
 
 # настройка переадресации на другую бд
-class MyDBRouter(object):
+class MyDBRouter:
 
     def db_for_read(self, model, **hints):
         """ reading SomeModel from otherdb """
