@@ -1,4 +1,4 @@
-from db.models import Maker
+from db.models import Maker, Introducer
 
 
 # настройка переадресации на другую бд
@@ -8,4 +8,7 @@ class MyDBRouter:
         """ reading SomeModel from otherdb """
         if model == Maker:
             return 'med_db'
-        return None
+        elif model == Introducer:
+            return 'med_db'
+        else:
+            return None

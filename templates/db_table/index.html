@@ -7,139 +7,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="{% static '/CSS/style.css' %}">
     <title>Document</title>
 </head>
 
 <body>
-    <div class="common_box">
-        <div class="view_box">
-            <div class="filter_box">
+    <div class="container">
+        <div class="filter_box">
+            <form action="#">
+                <div class="order_title">
+                    <span class="title_text">Производитель</span>
+                </div>
+                <div class="filter_unit">
+                <ul class="filter_list ">
+                    {% for item in maker %}
+                    <li class="container">
+                        <div class="checkbox">
+                            <input type="checkbox" name="" value="">
+                        </div>
+                        <div class="filter_unit_text">
+                            <span> {{ item.maker_name }}</span>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
 
             </div>
+                <input type="submit">
+            </form>
+        </div>
+        <div class="view_box">
+
             <div class="scroll-table">
                 <table>
                     <thead>
                         <tr>
-                            <th>Название блюда</th>
-                            <th>Белки</th>
-                            <th>Жиры</th>
-                            <th>Углеводы</th>
-                            <th>Ккал</th>
+                            <th>Производитель</th>
+                            {% for item in fields_name %}
+
+                            <th>{{ item }}</th>
+
+                            {% endfor %}
                         </tr>
                     </thead>
                 </table>
                 <div class="scroll-table-body">
                     <table>
                         <tbody>
-<!--                            <tr>-->
-<!--                                <td>Азу</td>-->
-<!--                                <td>11,9</td>-->
-<!--                                <td>14,2</td>-->
-<!--                                <td>10,2</td>-->
-<!--                                <td>214</td>-->
-<!--                            </tr>-->
-<!--                            <tr>-->
-<!--                                <td>Азу</td>-->
-<!--                                <td>11,9</td>-->
-<!--                                <td>14,2</td>-->
-<!--                                <td>10,2</td>-->
-<!--                                <td>214</td>-->
-<!--                            </tr>-->
-<!--                            <tr>-->
-<!--                                <td>Азу</td>-->
-<!--                                <td>11,9</td>-->
-<!--                                <td>14,2</td>-->
-<!--                                <td>10,2</td>-->
-<!--                                <td>214</td>-->
-<!--                            </tr>-->
-<!--                            <tr>-->
-<!--                                <td>Азу</td>-->
-<!--                                <td>11,9</td>-->
-<!--                                <td>14,2</td>-->
-<!--                                <td>10,2</td>-->
-<!--                                <td>214</td>-->
-<!--                            </tr>-->
-<!--                            <tr>-->
-<!--                                <td>Азу</td>-->
-<!--                                <td>11,9</td>-->
-<!--                                <td>14,2</td>-->
-<!--                                <td>10,2</td>-->
-<!--                                <td>214</td>-->
-<!--                            </tr>-->
-<!--                            <tr>-->
-<!--                                <td>Азу</td>-->
-<!--                                <td>11,9</td>-->
-<!--                                <td>14,2</td>-->
-<!--                                <td>10,2</td>-->
-<!--                                <td>214</td>-->
-<!--                            </tr>-->
-<!--                            <tr>-->
-<!--                                <td>Азу</td>-->
-<!--                                <td>11,9</td>-->
-<!--                                <td>14,2</td>-->
-<!--                                <td>10,2</td>-->
-<!--                                <td>214</td>-->
-<!--                            </tr>-->
-<!--                            <tr>-->
-<!--                                <td>Азу</td>-->
-<!--                                <td>11,9</td>-->
-<!--                                <td>14,2</td>-->
-<!--                                <td>10,2</td>-->
-<!--                                <td>214</td>-->
-<!--                            </tr>-->
-<!--                            <tr>-->
-<!--                                <td>Азу</td>-->
-<!--                                <td>11,9</td>-->
-<!--                                <td>14,2</td>-->
-<!--                                <td>10,2</td>-->
-<!--                                <td>214</td>-->
-<!--                            </tr>-->
-<!--                            <tr>-->
-<!--                                <td>Азу</td>-->
-<!--                                <td>11,9</td>-->
-<!--                                <td>14,2</td>-->
-<!--                                <td>10,2</td>-->
-<!--                                <td>214</td>-->
-<!--                            </tr>-->
-<!--                            <tr>-->
-<!--                                <td>Азу</td>-->
-<!--                                <td>11,9</td>-->
-<!--                                <td>14,2</td>-->
-<!--                                <td>10,2</td>-->
-<!--                                <td>214</td>-->
-<!--                            </tr>-->
-<!--                            <tr>-->
-<!--                                <td>Азу</td>-->
-<!--                                <td>11,9</td>-->
-<!--                                <td>14,2</td>-->
-<!--                                <td>10,2</td>-->
-<!--                                <td>214</td>-->
-<!--                            </tr>-->
-<!--                            <tr>-->
-<!--                                <td>Азу</td>-->
-<!--                                <td>11,9</td>-->
-<!--                                <td>14,2</td>-->
-<!--                                <td>10,2</td>-->
-<!--                                <td>214</td>-->
-<!--                            </tr>-->
-<!--                            <tr>-->
-<!--                                <td>Азу</td>-->
-<!--                                <td>11,9</td>-->
-<!--                                <td>14,2</td>-->
-<!--                                <td>10,2</td>-->
-<!--                                <td>214</td>-->
-<!--                            </tr>-->
-<!--                            <tr>-->
-<!--                                <td>Азу</td>-->
-<!--                                <td>11,9</td>-->
-<!--                                <td>14,2</td>-->
-<!--                                <td>10,2</td>-->
-<!--                                <td>214</td>-->
-<!--                            </tr>-->
                             {% for item in maker %}
                             <tr>
-                                <td>{{ item.id }}</td>
+
                                 <td>{{ item.maker_name }}</td>
 
                             </tr>
@@ -151,6 +68,7 @@
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
