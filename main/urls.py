@@ -19,7 +19,8 @@ from db import views
 from shop import views as shop_views
 
 urlpatterns = [
-    path('', views.index, name='index'), #указываем путь домена , что отображать, присваиваем произвольное имя
+   #path('', views.index, name='index'), #указываем путь домена , что отображать, присваиваем произвольное имя
+    path('', views.join_table, name='index'),
     path('shop/', shop_views.index, name='shop'),
     path('admin/', admin.site.urls),
 ]

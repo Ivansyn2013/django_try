@@ -54,11 +54,11 @@
                 <div class="scroll-table-body">
                     <table>
                         <tbody>
-                            {% for item in maker %}
+                            {% for item in join_table %}
                             <tr>
-
-                                <td>{{ item.maker_name }}</td>
-
+                                {% for unit in item %}
+                                    <td>{{ unit }}</td>
+                                {% endfor %}
                             </tr>
                             {% endfor %}
 
