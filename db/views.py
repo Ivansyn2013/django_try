@@ -34,7 +34,7 @@ def join_table(request):
         cursor.execute('SELECT * FROM maker JOIN introducer  ON maker.id=introducer.maker_id ;')
         result = cursor.fetchall()
 
-    print('это резульат', result)
+    #print('это резульат', result)
     context = {
         'fields_name': filds_name[1:],
         'join_table': result,
