@@ -28,29 +28,30 @@
     padding: 10px;
     background-color: bisque;
 }
-
+/*
+.search{
+    weight:100%
+}*/
+.search__input{
+    width: 1000px;
+    height:30px;
+    padding-inline-start: 52px;
+    padding-inline-end: 10px;
+    box-shadow: var(--newtab-search-first-shadow);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: var(--newtab-search-text-color);
+    font-weight: 500;
+    font-size: 15px;
+}
 
 .filter_list li {
     list-style-type: none;
 }
-
-/* .scroll-table-body {
-    height: 100%;
-    overflow-x: auto;
-    margin-top: 0px;
-    margin-bottom: 20px;
-    border: 1px solid black;
-    overflow: auto;
+.scroll-table {
+    border-collapse: collapse;
 }
 
-.scroll-table table {
-    width: 100%;
-    table-layout: fixed;
-    border: 1px solid black;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    max-width: 100%;
-} */
 
 
 /* ----------------------------- */
@@ -67,6 +68,7 @@
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
+    border-collapse: collapse;
 }
 
 /* ___________________ */

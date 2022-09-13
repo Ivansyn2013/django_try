@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static '/CSS/style.css' %}">
+    <script defer type="text/javascript" src='{% static "/JS/table_js.js" %}'> </script>
     <title>Document</title>
 </head>
 
@@ -37,22 +38,25 @@
             </form>
         </div>
         <div class="view_box">
-
+            <div class="seacrh">
+                <input type="text" class="search__input" id="search" onkeyup="tableSearch()" >
+            </div>
             <div class="scroll-table">
                 <table>
-                    <thead>
-                        <tr>
-                            <th>Производитель</th>
-                            {% for item in fields_name %}
 
-                            <th>{{ item }}</th>
-
-                            {% endfor %}
-                        </tr>
-                    </thead>
                 </table>
                 <div class="scroll-table-body">
-                    <table>
+                    <table id="table">
+                        <thead>
+                            <tr>
+                                <th>Производитель</th>
+                                {% for item in fields_name %}
+
+                                <th>{{ item }}</th>
+
+                                {% endfor %}
+                            </tr>
+                        </thead>
                         <tbody>
                             {% for item in join_table %}
                             <tr>
